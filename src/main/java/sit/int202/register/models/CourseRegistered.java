@@ -19,13 +19,13 @@ public class CourseRegistered {
 
     public void registerSubject(int semester, Subject subject) {
         if (registeredSubjects.get(semester)==null) {
-            registeredSubjects.put(semester, new ArrayList<>());
+            registeredSubjects.put(semester, new ArrayList<>()); //เช็คว่ามีหรือยัง ถ้ายังสร้าง list ก่อน
         }
-        registeredSubjects.get(semester).add(subject);
+        registeredSubjects.get(semester).add(subject); //มีแล้วข้ามมา แอดวิชาใหม่ใส่ได้เลย
     }
     public void removeAllRegisteredCourse(int semester) {
         registeredSubjects.remove(semester);
-    }
+    } //ล้างการลงทะเบียน
 
     public void removeAllRegisteredCourse() {
         registeredSubjects.clear();

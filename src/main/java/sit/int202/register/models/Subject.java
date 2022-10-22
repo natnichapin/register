@@ -44,11 +44,11 @@ public class Subject {
     private final Double credit;
     private Double grade = null;
 
-    private final static Map<Double, String> GRADE;
+    private final static Map<Double, String> GRADE; //เปลี่ยนตำแหน่งไม่ได้ แต่ยังจัดการภายในได้เหมือนเดิม
     private final static Map<String, Double> GRADE_STR;
 
     static {
-        GRADE = new HashMap();
+        GRADE = new HashMap(); //สร้าง array ที่เก็บ key และ value โดยผ่านฟังก์ชันแปลงรหัส
         GRADE_STR = new HashMap();
         initializedGrade();
     }
